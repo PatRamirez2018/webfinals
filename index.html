@@ -4,8 +4,66 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cascading Style Sheet</title>
+	<style>
+		h2 {
+			color: green;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+	<!-- Best Practice: External styling or external css -->
 </head>
 <body>
-	<h1>Intro to css</h1>
+	<!-- navbar -->
+	<nav id="top">
+		<a href="#landing">Centro Escolar University</a>
+		<div>
+			<a href="#landing">Home</a>
+			<a href="#register">Register</a>
+		</div>
+	</nav>
+	<!-- end of navbar for comment ctrl + / -->
+
+	<h1>Hello World!</h1>
+	<section id="landing">
+		
+		<h2>Welcome to Centro Escolar University</h2>
+		<!-- ids are unique identifiers of an element -->
+		<h3 id="ceu-motto">Ciencia y Virtud</h3>
+
+		<!-- image of puppy -->
+		<img src="assets/images/dog.jpg" alt="dog picture">
+
+
+		<!-- class - are used to group together elements therefore, we can now style multiple elements of the same class -->
+		<ol id="learning-list">
+			<li class="offering-item">Intro to computing</li>
+			<li class="offering-item">Data Analytics</li>
+			<li class="offering-item">Game Development</li>
+		</ol>
+
+		<!-- when an anchor tag reference an id, it will allow us to go to particular elements with the indicated id -->
+		<a href="#top">Back to Top</a>
+	</section>
+	<!-- end of section -->
+
+
+	<section id="register">
+		<h2>Register</h2>
+		<form>
+			<label for="first-name">First Name</label>
+			<input type="text" id="first-name" required autocomplete />
+
+			<label for="last-name">Last Name</label>
+			<input type="text" id="last-name" required autocomplete />
+
+			<label for="email">Email Address</label>
+			<input type="email" id="email" required autocomplete />
+
+			<button type="submit">Enroll Now!</button>
+		</form>
+		<a href="#top">Back to Top</a>
+		
+	</section>
+
 </body>
 </html>
