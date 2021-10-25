@@ -1,69 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cascading Style Sheet</title>
-	<style>
-		h2 {
-			color: green;
-		}
-	</style>
-	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-	<!-- Best Practice: External styling or external css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Festive&family=Merriweather&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<!-- navbar -->
-	<nav id="top">
-		<a href="#landing">Centro Escolar University</a>
-		<div>
-			<a href="#landing">Home</a>
-			<a href="#register">Register</a>
-		</div>
-	</nav>
-	<!-- end of navbar for comment ctrl + / -->
 
-	<h1>Hello World!</h1>
-	<section id="landing">
-		
-		<h2>Welcome to Centro Escolar University</h2>
-		<!-- ids are unique identifiers of an element -->
-		<h3 id="ceu-motto">Ciencia y Virtud</h3>
+    <div class="header">
 
-		<!-- image of puppy -->
-		<img src="/assets/images/dog.jpg" alt="dog picture">
+    <div class="container">
+        <div class="navbar">
+        <div class="logo">
+           <a href="index.html"><img src="assets/images/sushilog.png" width="125px"></a> 
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="products.html">Products</a></li>
+
+                <li><a href="aboutme.html">About Me</a></li>
+
+                <li><a href="">Contact</a></li>
+
+                <li><a href="account.html">Account</a></li>
+
+            </ul>
+        </nav>
+        <a href="cart.html"><img src="assets/images/carticon.png" width="30px" height="30px">
+        <img src="assets/images/menu.png" class="menu-icon" 
+        onclick="menutoggle()">
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <h1>BUY AND TRY <br> FOR A NEW TASTE!</h1>
+            <p>Good Food is the Foundation of <br>Genuine Happiness</p>
+
+            <a href="" class="btn">Explore Now &#8594;</a>
+        </div>
+        <div class="col-2">
+            <img src="assets/images/sushibg.png">
+        </div>
+    </div>
+    </div>
+    </div>
+
+<!-----featured categories ----->
+<div class="categiries">
+    <div class="small-container">
+        <div class="row">
+        <div class="col-3">
+            <img src="assets/images/uramakisushi.jpg">
+        </div>
+        <div class="col-3">
+            <img src="assets/images/makisushi.jpg">
+        </div>
+        <div class="col-3">
+            <img src="assets/images/temakisushi.jpg">
+        </div>
+    </div>
+    </div>
+    
+</div>
+    <!-----featured products ----->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="products-details.html"><img src="assets/images/nigirisushi.jpg"></a>
+                <a href="products-details.html"><h4>Nigiri Sushi</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                <p>₱500.00</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/images/tamagosushi.jpg">
+                <h4>Tamago Sushi</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    
+                </div>
+                <p>₱550.00</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/images/masagosushi.jpg">
+                <h4>Masago Sushi</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                <p>₱650.00</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/images/torosushi.jpg">
+                <h4>Toro Sushi</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    
+                </div>
+                <p>₱750.00</p>
+            </div>
+        </div>
 
 
-		<!-- class - are used to group together elements therefore, we can now style multiple elements of the same class -->
-		<ol id="learning-list">
-			<li class="offering-item">Intro to computing</li>
-			<li class="offering-item">Data Analytics</li>
-			<li class="offering-item">Game Development</li>
-		</ol>
+        <!----- Latest Product ----->
+        <h2 class="title">Best Selling</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="assets/images/sabasushi.jpg">
+                <h4>Saba Sushi</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                <p>₱700.00</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/images/hamachisushi.jpg">
+                <h4>Hamachi Sushi</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                <p>₱600.00</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/images/gunkansushi.jpg">
+                <h4>Gunkan Sushi</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                <p>₱650.00</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/images/narezushisushi.jpg">
+                <h4>Narezushi Sushi</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                <p>₱500.00</p>
+            </div>
+        </div>
+    </div>
 
-		<!-- when an anchor tag reference an id, it will allow us to go to particular elements with the indicated id -->
-		<a href="#top">Back to Top</a>
-	</section>
-	<!-- end of section -->
+<!----- Offer ----->
 
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="assets/images/sushicommunity.jpg" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on Sushi Store</p>
+                    <h1>Sushi box</h1>
+                    <small>The sushi box contains many different sushi.</small>
+                    <a href="" class="btn">Buy Now &#8594; </a>
+                </div>
 
-	<section id="register">
-		<h2>Register</h2>
-		<form>
-			<label for="first-name">First Name</label>
-			<input type="text" id="first-name" required autocomplete />
+            </div>
+        </div>
+    </div>
 
-			<label for="last-name">Last Name</label>
-			<input type="text" id="last-name" required autocomplete />
+    <!-- testimonial -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>The fine art of preparing sushi is something that you watch and learn</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="assets/images/nobumatsuhisa.jpg">
+                    <h3>Nobu Matsuhisa</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>There is always room for improvement</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="assets/images/richgunnell.jpg">
+                    <h3>Rich Gunnel</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Japanese chefs believe our soul goes into our knives once we start using them. You wouldnt put your soul in a dishwasher</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="assets/images/masaharumorimoto.jpg">
+                    <h3>Masaharu Morimoto</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<label for="email">Email Address</label>
-			<input type="email" id="email" required autocomplete />
+    <!----- brands ----->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="assets/images/kanzenlogo.png">
+                </div>
+                <div class="col-5">
+                    <img src="assets/images/thesashimiboy.png">
+                </div>
+                <div class="col-5">
+                    <img src="assets/images/genkisushiph.png">
+                </div>
+                <div class="col-5">
+                    <img src="assets/images/grynsushibar.png">
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<button type="submit">Enroll Now!</button>
-		</form>
-		<a href="#top">Back to Top</a>
-		
-	</section>
+    <!----- footer ----->
 
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Now</h3>
+                    <p>Dowload Now at Appstore and Playstore. </p>
+                    <div class="app-logo">
+                        <img src="assets/images/googlelogo.png">
+                        <img src="assets/images/appstorelogo.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="assets/images/sushilog.png">
+                    <p>Our purpose is to give yummy and high quality sushi </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="project">Websystem 2021 - Final Project</p>
+        </div>
+    </div>
+
+    <!----- js for toggle menu ----->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
 </body>
 </html>
